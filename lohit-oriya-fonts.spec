@@ -3,7 +3,7 @@
 
 Name:           %{fontname}-fonts
 Version:        2.4.3
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Free Oriya Font
 
 Group:          User Interface/X
@@ -18,6 +18,7 @@ Requires:       fontpackages-filesystem
 Patch1: bug-549319-578037.patch
 Patch2: bug-623995.patch
 Patch3: bug-639977.patch
+Patch4: bug-691293.patch
 Obsoletes: lohit-fonts-common < %{version}-%{release}
 
 %description
@@ -29,6 +30,7 @@ This package provides a free Oriya truetype/opentype font.
 %patch1 -p1 -b .1-fix-font-conf
 %patch2 -p1 -b .2-fix-for-qt
 %patch3 -p1 -b .3-added-akhn-ligature-gsub
+%patch4 -p1 -b .4-added-rupee
 
 %build
 ./generate.pe *.sfd
@@ -58,6 +60,9 @@ rm -fr %{buildroot}
 
 
 %changelog
+* Wed Jun 06 2011 Pravin Satpute <psatpute@redhat.com> - 2.4.3-6
+- Resolves: bug 691293
+
 * Mon Jan 24 2011 Pravin Satpute <psatpute@redhat.com> - 2.4.3-5
 - Resolves: bug 623990
 
