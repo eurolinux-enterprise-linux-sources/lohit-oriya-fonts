@@ -3,8 +3,8 @@
 
 Name:           %{fontname}-fonts
 Version:        2.5.4.1
-Release:        1%{?dist}
-Summary:        Free Oriya Font
+Release:        3%{?dist}
+Summary:        Free Odia Font
 
 Group:          User Interface/X
 License:        OFL
@@ -18,7 +18,7 @@ Requires:       fontpackages-filesystem
 
 
 %description
-This package provides a free Oriya truetype/opentype font.
+This package provides a free Odia truetype/opentype font.
 
 
 %prep
@@ -48,6 +48,12 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.5.4.1-3
+- Mass rebuild 2013-12-27
+
+* Thu Dec 26 2013 Pravin Satpute <psatpute@redhat.com> - 2.5.4.1-2
+- Resolves: rhbz#1046263 :- Replaced Oriya with Odia
+
 * Wed Jun 19 2013 Pravin Satpute <psatpute@redhat.com> - 2.5.4.1-1
 - Upstream release 2.5.4.1
 
